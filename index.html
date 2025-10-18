@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sass-exercise</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card card-custom">
+                    <img src="assets/img/lola-messy.jpg" class="card-img-top" alt="...">
+                    <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a href="#"><i class="fa-solid fa-bars"></i></a>
+                    <input type="range" class="custom-range-player position-absolute" id="musicRange" min="0" max="100"
+                        value="25">
+                    <div class="card-body">
+                        <h5 class="card-title">Messy</h5>
+                        <p class="card-text">Lola Young</p>
+                        <div class="card-player">
+                            <div class="backward"><a href="#"><i class="fa-solid fa-backward-step"></i></a></div>
+                            <div class="play"><a href="#"><i class="fa-solid fa-play"></i></a></div>
+                            <div class="forward"><a href="#"><i class="fa-solid fa-forward-step"></i></a></div>
+                        </div>
+                        <div class="more-options">
+                            <a href="#"><i class="fa-regular fa-heart"></i></a>
+                            <a href="#"><i class="fa-solid fa-shuffle"></i></a>
+                            <a href="#"><i class="fa-solid fa-arrow-rotate-left"></i></a>
+                            <a href="#"><i class="fa-solid fa-ellipsis"></i></a>
+                        </div>
+                    </div>
+                    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const range = document.getElementById('musicRange');
+        range.addEventListener('input', (e) => {
+            const value = e.target.value;
+            e.target.style.setProperty('--value', `${value}%`);
+        });
+    </script>
+</body>
+
+</html>
